@@ -1,4 +1,6 @@
 import React from "react";
+import { BsPlus, BsFillLightningFill, BsGearFill } from "react-icons/bs";
+import { FaFire, FaPoo } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
@@ -7,13 +9,16 @@ const Sidebar = () => {
     flex flex-col 
     bg-gray-900 text-white shadow-lg"
     >
-      <i>A</i>
-      <i>B</i>
-      <i>C</i>
-      <i>D</i>
-      <i>E</i>
+      <SideBarIcon icon={<FaFire size="28" />} />
+      <SideBarIcon icon={<BsPlus size="32" />} />
+      <SideBarIcon icon={<BsFillLightningFill size="20" />} />
+      <SideBarIcon icon={<FaPoo size="20" />} />
     </div>
   );
+};
+
+const SideBarIcon = ({ icon }) => {
+  return <div className="sidebar-icon">{icon}</div>;
 };
 
 export default Sidebar;
